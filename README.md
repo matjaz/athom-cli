@@ -16,6 +16,7 @@ Install it globally on your system (might require sudo):
 `$ athom project --create`
 
 **Run the new app** *(from within your app folder)*
+
 `$ athom project --run`
 
 **See what else is possible:**
