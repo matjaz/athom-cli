@@ -22,7 +22,11 @@ program
 program
 	.command('login')
 	.description('login to your Athom account')
-	.action(lib.user.login)
+	.action(function(){
+		lib.user.login(function(){
+			setTimeout(process.exit, 1000);
+		});
+	})
 	
 program
 	.command('logout')
@@ -31,6 +35,7 @@ program
 
 program
 	.command('project')
+	.description('run `athom project --help` to view homey commands')
 	.option('--create [path]', "create a new Homey app")
 	.option('--run [path]', "run a Homey app")
 	.action(function(options){
@@ -40,6 +45,7 @@ program
 	
 program
 	.command('homey')
+	.description('run `athom homey --help` to view homey commands')
 	.option('--list', 'list your Homeys')
 	.option('--select', 'select active Homey')
 	.option('--unselect', 'clear active Homey')

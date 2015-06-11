@@ -19,6 +19,16 @@ Install it globally on your system (might require sudo):
 
 `$ athom project --run`
 
+**View your Homeys**
+
+`$ athom homey --list`
+
+**Select a single Homey as active**
+
+*Your active Homey will automatically be used for running apps*
+
+`$ athom homey --select`
+
 **See what else is possible:**
 
 `$ athom --help`
