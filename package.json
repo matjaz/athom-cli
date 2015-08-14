@@ -13,6 +13,7 @@
     "body-parser": "^1.12.4",
     "colors": "^1.1.0",
     "commander": "^2.8.1",
+    "devkit-lib": "git+https://github.com/athombv/devkit-lib.git",
     "express": "^4.12.4",
     "fs-extra": "^0.18.4",
     "inquirer": "^0.8.3",

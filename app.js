@@ -38,9 +38,13 @@ program
 	.description('run `athom project --help` to view homey commands')
 	.option('--create [path]', "create a new Homey app")
 	.option('--run [path]', "run a Homey app")
+	.option('--validate [path]', "validate a Homey app")
+	.option('--validate-app-store [path]', "validate a Homey app")
 	.action(function(options){
-		if( options.create )	lib.project.create(options.create);
-		if( options.run )		lib.project.run(options.run);
+		if( options.create )					lib.project.create(options.create);
+		if( options.run )						lib.project.run(options.run);
+		if( options.validate )					lib.project.validate(options.validate);
+		if( options.validateAppStore )			lib.project.validateAppStore(options.validateAppStore);
 	})
 	
 program
