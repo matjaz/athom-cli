@@ -11,7 +11,8 @@ var lib = global.lib = {
 	user		: require('./lib/user'),
 	api			: require('./lib/api'),
 	homey		: require('./lib/homey'),
-	project		: require('./lib/project')
+	project		: require('./lib/project'),
+	ledring		: require('./lib/ledring')
 }
  
 var pjson = require( path.join(__dirname, 'package.json') );
@@ -57,6 +58,14 @@ program
 		if( options.list )		lib.homey.list();
 		if( options.select )	lib.homey.select(true);
 		if( options.unselect )	lib.homey.unselect();
+	})
+	
+program
+	.command('ledring')
+	.description('run `athom ledring --help` to view homey commands')
+	.option('--run [path]', "run a ledring animation app")
+	.action(function(options){
+		if( options.run )		lib.ledring.run(options.run);
 	})
 	
 program
