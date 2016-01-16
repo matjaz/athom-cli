@@ -52,12 +52,14 @@ program
 	.command('homey')
 	.description('run `athom homey --help` to view homey commands')
 	.option('--list', 'list your Homeys')
+	.option('--list-local', 'list your USB-connected Homeys')
 	.option('--select', 'select active Homey')
 	.option('--unselect', 'clear active Homey')
 	.action(function(options){
-		if( options.list )		lib.homey.list();
-		if( options.select )	lib.homey.select(true);
-		if( options.unselect )	lib.homey.unselect();
+		if( options.list )			lib.homey.list();
+		if( options.listLocal )		lib.homey.listLocal();
+		if( options.select )		lib.homey.select(true);
+		if( options.unselect )		lib.homey.unselect();
 	})
 	
 program

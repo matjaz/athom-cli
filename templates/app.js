@@ -1,12 +1,9 @@
 "use strict";
 
-function App() 
-{
+function init() {
+	
+	Homey.log("Hello world!");
 	
 }
 
-App.prototype.init = function(){
-	  
-};
-
-module.exports = App;
+module.exports.init = init;
