@@ -1,6 +1,6 @@
 {
   "name": "athom-cli",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Command Line Interface for the development of Homey Apps",
   "main": "app.js",
   "repository": {
